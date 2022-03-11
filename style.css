@@ -564,12 +564,15 @@ iframe {
   .img-inst-ind {
     width: 90%;
   }
+  .texto-instalaciones {
+    margin-bottom: 0rem;
+  }
   .contenedor-rehabilitacion .rehabilitacion {
     display: flex;
     flex-direction: column-reverse;
   }
   .texto-rehabilitacion {
-    padding: 1.5rem;
+    padding: 0.5rem;
     margin-bottom: 0rem;
   }
   .img-rehabilitacion {
