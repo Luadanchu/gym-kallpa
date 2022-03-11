@@ -23,15 +23,6 @@ body {
     "clases rehabilitacion"
     "footer footer";
 }
-.contenedor > div,
-.contenedor main,
-.contenedor .nosotros,
-.contenedor .instalaciones,
-.contenedor .clases,
-.contenedor .rehabilitacion {
-  background: black;
-  padding: 15px;
-}
 header {
   background: #3a3a3a;
   padding: 5px;
@@ -124,7 +115,6 @@ footer h4 {
 .listas-footer li a {
   text-decoration: none;
   color: white;
-  padding: 3px;
   font-size: 12px;
 }
 .listas-footer li a i {
@@ -145,12 +135,7 @@ footer h4 {
     "profe3 profe4"
     "footer footer";
 }
-.contenedor-nosotros > div,
-.contenedor-nosotros main,
-.contenedor-nosotros .profe1,
-.contenedor-nosotros .profe2,
-.contenedor-nosotros .profe3,
-.contenedor-nosotros .profe4 {
+.contenedor-nosotros > div {
   background: #3a3a3a;
   padding: 15px;
 }
@@ -159,6 +144,8 @@ footer h4 {
 .contenedor-nosotros .profe2,
 .contenedor-nosotros .profe3,
 .contenedor-nosotros .profe4 {
+  background: #3a3a3a;
+  padding: 15px;
   color: white;
   text-align: center;
   display: flex;
@@ -236,14 +223,9 @@ h5 {
   margin-bottom: 1.5rem;
 }
 .texto-instalaciones {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  justify-items: center;
   font-size: 0.8rem;
-  text-align: justify;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
 }
 .contenedor-instalaciones .instalaciones .img-instalaciones {
   display: flex;
@@ -271,22 +253,23 @@ h5 {
     "clase-profesor clase-stretching clase-yoga"
     "footer footer footer";
 }
-.contenedor-clases > div,
-.contencontenedor-clases main,
-.contenedor-clases .nosotros,
-.contenedor-clases .instalaciones,
-.contenedor-clases .clases,
-.contenedor-clases .rehabilitacion {
+.contenedor-clases > div {
   background: #3a3a3a;
   padding: 15px;
 }
-.contenedor-clases main,
+.contenedor-clases main {
+  background: black;
+  color: white;
+  min-height: 50px;
+}
 .contenedor-clases .clase-halterofilia,
 .contenedor-clases .clase-musculacion,
 .contenedor-clases .clase-personalizada,
 .contenedor-clases .clase-profesor,
 .contenedor-clases .clase-stretching,
 .contenedor-clases .clase-yoga {
+  background: #3a3a3a;
+  padding: 15px;
   color: white;
   min-height: 50px;
 }
@@ -296,10 +279,6 @@ h4 {
   padding-top: 0.5rem;
 }
 .texto-clases {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  justify-items: center;
   font-size: 0.8rem;
   text-align: justify;
   padding: 1rem;
@@ -308,7 +287,7 @@ h4 {
   width: 100%;
 }
 .contenedor-clases main {
-  padding: 0px;
+  padding: 0;
   grid-area: main;
 }
 .contenedor-clases main .video-clases {
@@ -371,10 +350,6 @@ h6 {
   text-align: center;
 }
 .texto-rehabilitacion {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  justify-items: center;
   font-size: 0.8rem;
   text-align: justify;
   padding: 1.5rem;
@@ -411,7 +386,6 @@ h6 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  justify-items: center;
 }
 iframe {
   width: 48%;
@@ -450,16 +424,7 @@ iframe {
 ::placeholder {
   color: black;
 }
-.boton {
-  background-color: rgb(222, 222, 222);
-  color: black;
-  font-size: 15px;
-  font-weight: bold;
-  border: 1px solid black;
-  padding: 5px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
+.boton,
 .boton1 {
   background-color: rgb(222, 222, 222);
   color: black;
@@ -487,11 +452,6 @@ iframe {
       "rehabilitacion rehabilitacion"
       "footer footer";
   }
-  nav {
-    background: black;
-    flex-direction: column;
-  }
-
   h3 {
     display: inline-block;
     font-size: 1rem;
@@ -564,12 +524,17 @@ iframe {
   .img-inst-ind {
     width: 90%;
   }
+  .texto-instalaciones {
+    margin-bottom: 0rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
   .contenedor-rehabilitacion .rehabilitacion {
     display: flex;
     flex-direction: column-reverse;
   }
   .texto-rehabilitacion {
-    padding: 1.5rem;
+    padding: 0.5rem;
     margin-bottom: 0rem;
   }
   .img-rehabilitacion {
