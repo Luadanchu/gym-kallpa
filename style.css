@@ -124,11 +124,11 @@ footer h4 {
 .listas-footer li a {
   text-decoration: none;
   color: white;
-  padding: 3px;
   font-size: 12px;
 }
 .listas-footer li a i {
   font-size: 20px;
+  text-align: center;
 }
 
 .contenedor-nosotros {
