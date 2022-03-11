@@ -110,6 +110,7 @@ footer .footer-container .logo-footer {
 }
 footer h4 {
   font-size: 13px;
+  text-align: center;
 }
 .listas-footer {
   list-style-type: none;
@@ -125,6 +126,9 @@ footer h4 {
   color: white;
   padding: 3px;
   font-size: 12px;
+}
+.listas-footer li a i {
+  font-size: 20px;
 }
 
 .contenedor-nosotros {
@@ -531,10 +535,10 @@ iframe {
       "footer footer";
   }
   h5 {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
   .texto-profe {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     text-align: justify;
   }
 
@@ -543,14 +547,22 @@ iframe {
     grid-template-areas:
       "header header"
       "main main"
-      "clase-halterofilia clase-musculacion"
-      "clase-personalizada clase-profesor"
-      "clase-stretching clase-yoga"
+      "clase-halterofilia clase-halterofilia"
+      "clase-musculacion clase-musculacion"
+      "clase-personalizada clase-personalizada"
+      "clase-profesor clase-profesor"
+      "clase-stretching clase-stretching"
+      "clase-yoga clase-yoga"
       "footer footer";
   }
+  h4 {
+    font-size: 1rem;
+  }
+  .texto-clases {
+    font-size: 0.7rem;
+  }
   .img-inst-ind {
-    width: 40%;
-    margin: 0.2rem;
+    width: 90%;
   }
   .contenedor-rehabilitacion .rehabilitacion {
     display: flex;
