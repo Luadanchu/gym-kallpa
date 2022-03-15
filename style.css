@@ -8,6 +8,14 @@ body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 7px;
+  border-right: solid black 2px;
+}
 .contenedor {
   width: 99%;
   max-width: 3000px;
@@ -103,19 +111,15 @@ footer h4 {
   font-size: 13px;
   text-align: center;
 }
-.listas-footer {
-  list-style-type: none;
+.p-footer {
+  margin-bottom: 0px;
 }
 .listas-footer li {
   display: inline-block;
-  text-align: center;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  margin-right: 15px;
 }
 .listas-footer li a {
-  text-decoration: none;
   color: white;
-  font-size: 12px;
 }
 .listas-footer li a i {
   font-size: 20px;
@@ -421,6 +425,7 @@ iframe {
   background-color: rgb(222, 222, 222);
   border: 1px solid black;
   margin-bottom: 2rem;
+  resize: none;
 }
 ::placeholder {
   color: black;
@@ -527,11 +532,8 @@ iframe {
   }
   .texto-instalaciones {
     margin-bottom: 0rem;
-<<<<<<< HEAD
-=======
     padding-right: 1.5rem;
     padding-left: 1.5rem;
->>>>>>> work
   }
   .contenedor-rehabilitacion .rehabilitacion {
     display: flex;
