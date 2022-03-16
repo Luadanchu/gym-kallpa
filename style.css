@@ -10,6 +10,7 @@ body {
 }
 body::-webkit-scrollbar {
   width: 7px;
+  margin: 0;
 }
 body::-webkit-scrollbar-thumb {
   background: #3a3a3a;
@@ -24,12 +25,8 @@ body::-webkit-scrollbar-thumb {
   grid-gap: 10px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(5, auto);
-  grid-template-areas:
-    "header header"
-    "main main"
-    "nosotros instalaciones"
-    "clases rehabilitacion"
-    "footer footer";
+  grid-template-areas: "header header" "main main" "nosotros instalaciones" "clases rehabilitacion" "footer footer";
+  overflow: hidden;
 }
 header {
   background: #3a3a3a;
@@ -46,7 +43,6 @@ header .container {
 #logo {
   width: 150px;
 }
-
 .contenedor main,
 .contenedor .nosotros,
 .contenedor .instalaciones,
@@ -58,6 +54,7 @@ header .container {
   align-items: center;
   justify-content: center;
   min-height: 50px;
+  padding: 15px;
 }
 h3 {
   display: inline-block;
@@ -134,11 +131,7 @@ footer h4 {
   grid-gap: 10px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, auto);
-  grid-template-areas:
-    "header header"
-    "profe1 profe2"
-    "profe3 profe4"
-    "footer footer";
+  grid-template-areas: "header header" "profe1 profe2" "profe3 profe4" "footer footer";
 }
 .contenedor-nosotros > div {
   background: #3a3a3a;
@@ -203,10 +196,7 @@ h5 {
   grid-gap: 10px;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, auto);
-  grid-template-areas:
-    "header"
-    "instalaciones"
-    "footer";
+  grid-template-areas: "header" "instalaciones" "footer";
 }
 .contenedor-instalaciones > div,
 .contenedor-instalaciones .instalaciones {
@@ -251,12 +241,7 @@ h5 {
   grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, auto);
-  grid-template-areas:
-    "header header header"
-    "main main main"
-    "clase-halterofilia clase-musculacion clase-personalizada"
-    "clase-profesor clase-stretching clase-yoga"
-    "footer footer footer";
+  grid-template-areas: "header header header" "main main main" "clase-halterofilia clase-musculacion clase-personalizada" "clase-profesor clase-stretching clase-yoga" "footer footer footer";
 }
 .contenedor-clases > div {
   background: #3a3a3a;
@@ -331,10 +316,7 @@ h4 {
   grid-gap: 10px;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, auto);
-  grid-template-areas:
-    "header"
-    "rehabilitacion"
-    "footer";
+  grid-template-areas: "header" "rehabilitacion" "footer";
 }
 .contenedor-rehabilitacion > div,
 .contenedor-rehabilitacion .rehabilitacion {
@@ -449,14 +431,7 @@ iframe {
 
 @media screen and (max-width: 800px) {
   .contenedor {
-    grid-template-areas:
-      "header header"
-      "main main"
-      "nosotros nosotros"
-      "instalaciones instalaciones"
-      "clases clases"
-      "rehabilitacion rehabilitacion"
-      "footer footer";
+    grid-template-areas: "header header" "main main" "nosotros nosotros" "instalaciones instalaciones" "clases clases" "rehabilitacion rehabilitacion" "footer footer";
   }
   h3 {
     display: inline-block;
@@ -492,13 +467,7 @@ iframe {
   }
 
   .contenedor-nosotros {
-    grid-template-areas:
-      "header header"
-      "profe1 profe1"
-      "profe2 profe2"
-      "profe3 profe3"
-      "profe4 profe4"
-      "footer footer";
+    grid-template-areas: "header header" "profe1 profe1" "profe2 profe2" "profe3 profe3" "profe4 profe4" "footer footer";
   }
   h5 {
     font-size: 1rem;
@@ -510,16 +479,7 @@ iframe {
 
   .contenedor-clases {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "header header"
-      "main main"
-      "clase-halterofilia clase-halterofilia"
-      "clase-musculacion clase-musculacion"
-      "clase-personalizada clase-personalizada"
-      "clase-profesor clase-profesor"
-      "clase-stretching clase-stretching"
-      "clase-yoga clase-yoga"
-      "footer footer";
+    grid-template-areas: "header header" "main main" "clase-halterofilia clase-halterofilia" "clase-musculacion clase-musculacion" "clase-personalizada clase-personalizada" "clase-profesor clase-profesor" "clase-stretching clase-stretching" "clase-yoga clase-yoga" "footer footer";
   }
   h4 {
     font-size: 1rem;
@@ -549,7 +509,6 @@ iframe {
   .img-rehabilitacion2 {
     display: none;
   }
-
   .contenedor-contacto .contacto {
     display: flex;
     flex-direction: column;
@@ -562,15 +521,11 @@ iframe {
     width: 100%;
     font-size: 12px;
   }
-  .formulario-control {
-    font-size: 8px;
-  }
+  .formulario-control,
   .formulario-control2 {
     font-size: 8px;
   }
-  .boton {
-    font-size: 12px;
-  }
+  .boton,
   .boton1 {
     font-size: 12px;
   }
