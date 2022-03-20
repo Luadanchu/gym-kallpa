@@ -1,0 +1,516 @@
+@import "variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $bg-gral;
+  font-family: $tx;
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    margin: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $bg-sp;
+    border-radius: 0.5rem;
+    border-right: solid $bg-gral 2px;
+  }
+  .contenedor {
+    width: $w-cont-page;
+    max-width: $mw-cont-page;
+    margin: $m-cont-page;
+    display: grid;
+    grid-gap: $grid-gap-cont-page;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "header header" "main main" "nosotros instalaciones" "clases rehabilitacion" "footer footer";
+    overflow: hidden;
+  }
+  header {
+    background: $bg-sp;
+    padding: 5px;
+    grid-area: header;
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2px;
+    }
+    #logo {
+      width: 150px;
+    }
+  }
+  .contenedor {
+    main,
+    .nosotros,
+    .instalaciones,
+    .clases,
+    .rehabilitacion {
+      color: $color-w;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: $m-h;
+      padding: $pad-cont-inicio;
+    }
+    h3 {
+      display: inline-block;
+      position: absolute;
+      font-size: $fs-h3;
+    }
+    .img-inicio {
+      width: $w-img;
+      &:hover {
+        filter: brightness(1.5);
+      }
+    }
+    main {
+      padding: 0;
+      grid-area: main;
+      .video-inicio {
+        width: $w-img;
+      }
+    }
+    .nosotros {
+      grid-area: nosotros;
+    }
+    .instalaciones {
+      grid-area: instalaciones;
+    }
+    .clases {
+      grid-area: clases;
+    }
+    .rehabilitacion {
+      grid-area: rehabilitacion;
+    }
+  }
+  footer {
+    background: $bg-sp;
+    color: $color-w;
+    padding: 0.5rem 2rem;
+    grid-area: footer;
+    font-size: $fs-12;
+    .footer-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: $fs-12;
+      .logo-footer {
+        width: 150px;
+      }
+      h4 {
+        font-size: $fs-13;
+        text-align: center;
+      }
+      .p-footer {
+        margin-bottom: 0px;
+      }
+      .listas-footer li {
+        display: inline-block;
+        margin-right: 15px;
+        a {
+          color: $color-w;
+          i {
+            font-size: 20px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .contenedor-nosotros {
+    width: $w-cont-page;
+    max-width: $mw-cont-page;
+    margin: $m-cont-page;
+    display: grid;
+    grid-gap: $grid-gap-cont-page;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header" "profe1 profe2" "profe3 profe4" "footer footer";
+    > div {
+      background: $bg-sp;
+      padding: 15px;
+    }
+    main,
+    .profe1,
+    .profe2,
+    .profe3,
+    .profe4 {
+      background: $bg-sp;
+      padding: $pad-nos-prof;
+      color: $color-w;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      min-height: $m-h;
+    }
+    .texto-nosotros {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      justify-items: center;
+      padding: 1rem;
+    }
+    h5 {
+      font-size: $fs-15;
+    }
+    .texto-profe {
+      font-size: $fs-08;
+      text-align: justify;
+    }
+    .img-nosotros {
+      width: $w-img50;
+    }
+    main {
+      padding: 0;
+      grid-area: main;
+    }
+    .profe1 {
+      grid-area: profe1;
+    }
+    .profe2 {
+      grid-area: profe2;
+    }
+    .profe3 {
+      grid-area: profe3;
+    }
+    .profe4 {
+      grid-area: profe4;
+    }
+  }
+  .contenedor-instalaciones {
+    width: $w-cont-page;
+    max-width: $mw-cont-page;
+    margin: $m-cont-page;
+    display: grid;
+    grid-gap: $grid-gap-cont-page;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header" "instalaciones" "footer";
+    > div,
+    .instalaciones {
+      background: $bg-sp;
+      padding: 1rem;
+      color: $color-w;
+      min-height: $m-h;
+      grid-area: instalaciones;
+    }
+    .instalaciones {
+      display: flex;
+      flex-direction: column;
+      .texto-instalaciones {
+        font-size: $fs-08;
+        padding-right: 4rem;
+        padding-left: 4rem;
+        h2 {
+          font-size: $fs-15;
+          text-align: center;
+          margin-bottom: 1.5rem;
+        }
+      }
+      .img-instalaciones {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        .img-inst-ind {
+          width: $w-img30;
+          margin: 0.2rem;
+        }
+      }
+    }
+  }
+  .contenedor-clases {
+    width: $w-cont-page;
+    max-width: $mw-cont-page;
+    margin: $m-cont-page;
+    display: grid;
+    grid-gap: $grid-gap-cont-page;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "header header header" "main main main" "clase-halterofilia clase-musculacion clase-personalizada" "clase-profesor clase-stretching clase-yoga" "footer footer footer";
+    > div {
+      background: $bg-sp;
+      padding: 15px;
+    }
+    main {
+      background: $bg-gral;
+      color: $color-w;
+      min-height: $m-h;
+      padding: 0;
+      grid-area: main;
+      .video-clases {
+        width: 100%;
+      }
+    }
+    .clase-halterofilia,
+    .clase-musculacion,
+    .clase-personalizada,
+    .clase-profesor,
+    .clase-stretching,
+    .clase-yoga {
+      background: $bg-sp;
+      padding: $pad-cont-inicio;
+      color: $color-w;
+      min-height: $m-h;
+      h4 {
+        font-size: $fs-1;
+        text-align: center;
+        padding-top: 0.5rem;
+      }
+      .texto-clases {
+        font-size: $fs-08;
+        text-align: justify;
+        padding: 1rem;
+      }
+      .img-clases {
+        width: $w-img;
+      }
+    }
+    .clase-halterofilia {
+      grid-area: clase-halterofilia;
+    }
+    .clase-musculacion {
+      grid-area: clase-musculacion;
+    }
+    .clase-personalizada {
+      grid-area: clase-personalizada;
+    }
+    .clase-profesor {
+      grid-area: clase-profesor;
+    }
+    .clase-stretching {
+      grid-area: clase-stretching;
+    }
+    .clase-yoga {
+      grid-area: clase-yoga;
+    }
+  }
+  .contenedor-rehabilitacion {
+    width: $w-cont-page;
+    max-width: $mw-cont-page;
+    margin: $m-cont-page;
+    display: grid;
+    grid-gap: $grid-gap-cont-page;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header" "rehabilitacion" "footer";
+    .rehabilitacion {
+      background: $bg-sp;
+      padding: 15px;
+      color: $color-w;
+      min-height: $m-h;
+      grid-area: rehabilitacion;
+    }
+    .rehabilitacion {
+      display: flex;
+      flex-direction: row;
+      .texto-rehabilitacion {
+        font-size: 0.8rem;
+        text-align: justify;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        h6 {
+          font-size: 1.2rem;
+          text-align: center;
+        }
+      }
+      .img-rehabilitacion,
+      .img-rehabilitacion2 {
+        width: 25%;
+      }
+    }
+  }
+  .contenedor-contacto {
+    width: $w-cont-page;
+    max-width: $mw-cont-page;
+    margin: $m-cont-page;
+    display: grid;
+    grid-gap: $grid-gap-cont-page;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header" "formulario" "footer";
+    > div,
+    .contacto,
+    .formulario {
+      background: $bg-sp;
+      padding: 15px;
+      color: $color-w;
+      min-height: $m-h;
+      grid-area: formulario;
+    }
+    .contacto {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      iframe {
+        width: 48%;
+        filter: grayscale(1);
+      }
+      .formulario {
+        width: 48%;
+        font-size: $fs-1;
+        padding: 15px;
+        border: $bg-gral solid 1px;
+        margin: 1rem 0 1rem 0;
+        &:hover {
+          border: $color-w solid 1px;
+        }
+        .bloque-formulario {
+          width: $w-img;
+          margin: 3px;
+          &:hover {
+            color: $color-w;
+          }
+          .formulario-control {
+            display: block;
+            height: 30px;
+            font-size: 10px;
+            width: $w-img;
+            padding: 5px 5px;
+            background-color: $bg-form;
+            border: 1px solid $bg-gral;
+          }
+          .formulario-control2 {
+            display: block;
+            font-size: 10px;
+            width: $w-img;
+            padding: 5px 5px;
+            background-color: $bg-form;
+            border: 1px solid $bg-gral;
+            margin-bottom: 2rem;
+            resize: none;
+          }
+        }
+        .botonera {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .boton,
+          .boton1 {
+            background-color: $bg-form;
+            color: $bg-gral;
+            font-size: $fs-1;
+            font-weight: bold;
+            border: 1px solid $bg-gral;
+            padding: 5px;
+            font-family: $tx;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .contenedor {
+      grid-template-areas: "header header" "main main" "nosotros nosotros" "instalaciones instalaciones" "clases clases" "rehabilitacion rehabilitacion" "footer footer";
+      h3 {
+        display: inline-block;
+        font-size: 1rem;
+      }
+    }
+    footer {
+      padding: 1rem;
+      .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: $fs-08;
+        text-align: center;
+        .listas-footer {
+          font-size: 10px;
+          li {
+            display: inline-block;
+            text-align: center;
+            font-family: $tx;
+            a {
+              padding: 1px;
+              font-size: $fs-08;
+            }
+          }
+        }
+      }
+    }
+    .contenedor-nosotros {
+      grid-template-areas: "header header" "profe1 profe1" "profe2 profe2" "profe3 profe3" "profe4 profe4" "footer footer";
+      h5 {
+        font-size: 1rem;
+      }
+      .texto-profe {
+        font-size: $fs-12;
+        text-align: justify;
+      }
+    }
+
+    .contenedor-instalaciones {
+      .instalaciones {
+        .texto-instalaciones {
+          margin-bottom: 0rem;
+          padding-right: 1.5rem;
+          padding-left: 1.5rem;
+        }
+        .img-instalaciones {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .img-inst-ind {
+            width: 90%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    .contenedor-clases {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "header header" "main main" "clase-halterofilia clase-halterofilia" "clase-musculacion clase-musculacion" "clase-personalizada clase-personalizada" "clase-profesor clase-profesor" "clase-stretching clase-stretching" "clase-yoga clase-yoga" "footer footer";
+      h4 {
+        font-size: 1rem;
+      }
+      .texto-clases {
+        font-size: $fs-12;
+      }
+    }
+    .contenedor-rehabilitacion {
+      .rehabilitacion {
+        display: flex;
+        flex-direction: column-reverse;
+        .texto-rehabilitacion {
+          padding: 0.5rem;
+          margin-bottom: 0rem;
+        }
+        .img-rehabilitacion {
+          width: 100%;
+        }
+        .img-rehabilitacion2 {
+          display: none;
+        }
+      }
+    }
+    .contenedor-contacto {
+      .contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        iframe {
+          width: $w-img;
+        }
+        .formulario {
+          width: $w-img;
+          font-size: $fs-12;
+          .formulario-control,
+          .formulario-control2 {
+            font-size: 8px;
+          }
+          .boton,
+          .boton1 {
+            font-size: $fs-12;
+          }
+        }
+      }
+    }
+  }
+}

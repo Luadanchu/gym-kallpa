@@ -1,0 +1,759 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  font-family: "Trebuchet MS", #ffffff;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  margin: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 0.5rem;
+  border-right: solid #000000 2px;
+}
+
+body .contenedor {
+  width: 99%;
+  max-width: 3000px;
+  margin: 5px auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (auto)[5];
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas: "header header" "main main" "nosotros instalaciones" "clases rehabilitacion" "footer footer";
+  overflow: hidden;
+}
+
+body header {
+  background: #3a3a3a;
+  padding: 5px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+body header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px;
+}
+
+body header #logo {
+  width: 150px;
+}
+
+body .contenedor main,
+body .contenedor .nosotros,
+body .contenedor .instalaciones,
+body .contenedor .clases,
+body .contenedor .rehabilitacion {
+  color: #ffffff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 3.12rem;
+  padding: 4px 4px 0 4px;
+}
+
+body .contenedor h3 {
+  display: inline-block;
+  position: absolute;
+  font-size: 1.5rem;
+}
+
+body .contenedor .img-inicio {
+  width: 100%;
+}
+
+body .contenedor .img-inicio:hover {
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
+}
+
+body .contenedor main {
+  padding: 0;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: main;
+}
+
+body .contenedor main .video-inicio {
+  width: 100%;
+}
+
+body .contenedor .nosotros {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: nosotros;
+}
+
+body .contenedor .instalaciones {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: instalaciones;
+}
+
+body .contenedor .clases {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: clases;
+}
+
+body .contenedor .rehabilitacion {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: rehabilitacion;
+}
+
+body footer {
+  background: #3a3a3a;
+  color: #ffffff;
+  padding: 0.5rem 2rem;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  font-size: 0.7rem;
+}
+
+body footer .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.7rem;
+}
+
+body footer .footer-container .logo-footer {
+  width: 150px;
+}
+
+body footer .footer-container h4 {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+body footer .footer-container .p-footer {
+  margin-bottom: 0px;
+}
+
+body footer .footer-container .listas-footer li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+body footer .footer-container .listas-footer li a {
+  color: #ffffff;
+}
+
+body footer .footer-container .listas-footer li a i {
+  font-size: 20px;
+  text-align: center;
+}
+
+body .contenedor-nosotros {
+  width: 99%;
+  max-width: 3000px;
+  margin: 5px auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (auto)[4];
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas: "header header" "profe1 profe2" "profe3 profe4" "footer footer";
+}
+
+body .contenedor-nosotros > div {
+  background: #3a3a3a;
+  padding: 15px;
+}
+
+body .contenedor-nosotros main,
+body .contenedor-nosotros .profe1,
+body .contenedor-nosotros .profe2,
+body .contenedor-nosotros .profe3,
+body .contenedor-nosotros .profe4 {
+  background: #3a3a3a;
+  padding: 4px;
+  color: #ffffff;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 3.12rem;
+}
+
+body .contenedor-nosotros .texto-nosotros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  justify-items: center;
+  padding: 1rem;
+}
+
+body .contenedor-nosotros h5 {
+  font-size: 1.5rem;
+}
+
+body .contenedor-nosotros .texto-profe {
+  font-size: 0.8rem;
+  text-align: justify;
+}
+
+body .contenedor-nosotros .img-nosotros {
+  width: 50%;
+}
+
+body .contenedor-nosotros main {
+  padding: 0;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: main;
+}
+
+body .contenedor-nosotros .profe1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: profe1;
+}
+
+body .contenedor-nosotros .profe2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: profe2;
+}
+
+body .contenedor-nosotros .profe3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: profe3;
+}
+
+body .contenedor-nosotros .profe4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: profe4;
+}
+
+body .contenedor-instalaciones {
+  width: 99%;
+  max-width: 3000px;
+  margin: 5px auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: "header" "instalaciones" "footer";
+}
+
+body .contenedor-instalaciones > div,
+body .contenedor-instalaciones .instalaciones {
+  background: #3a3a3a;
+  padding: 1rem;
+  color: #ffffff;
+  min-height: 3.12rem;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: instalaciones;
+}
+
+body .contenedor-instalaciones .instalaciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .contenedor-instalaciones .instalaciones .texto-instalaciones {
+  font-size: 0.8rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+body .contenedor-instalaciones .instalaciones .texto-instalaciones h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+body .contenedor-instalaciones .instalaciones .img-instalaciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .contenedor-instalaciones .instalaciones .img-instalaciones .img-inst-ind {
+  width: 30%;
+  margin: 0.2rem;
+}
+
+body .contenedor-clases {
+  width: 99%;
+  max-width: 3000px;
+  margin: 5px auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (auto)[5];
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas: "header header header" "main main main" "clase-halterofilia clase-musculacion clase-personalizada" "clase-profesor clase-stretching clase-yoga" "footer footer footer";
+}
+
+body .contenedor-clases > div {
+  background: #3a3a3a;
+  padding: 15px;
+}
+
+body .contenedor-clases main {
+  background: #000000;
+  color: #ffffff;
+  min-height: 3.12rem;
+  padding: 0;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: main;
+}
+
+body .contenedor-clases main .video-clases {
+  width: 100%;
+}
+
+body .contenedor-clases .clase-halterofilia,
+body .contenedor-clases .clase-musculacion,
+body .contenedor-clases .clase-personalizada,
+body .contenedor-clases .clase-profesor,
+body .contenedor-clases .clase-stretching,
+body .contenedor-clases .clase-yoga {
+  background: #3a3a3a;
+  padding: 4px 4px 0 4px;
+  color: #ffffff;
+  min-height: 3.12rem;
+}
+
+body .contenedor-clases .clase-halterofilia h4,
+body .contenedor-clases .clase-musculacion h4,
+body .contenedor-clases .clase-personalizada h4,
+body .contenedor-clases .clase-profesor h4,
+body .contenedor-clases .clase-stretching h4,
+body .contenedor-clases .clase-yoga h4 {
+  font-size: 1rem;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+body .contenedor-clases .clase-halterofilia .texto-clases,
+body .contenedor-clases .clase-musculacion .texto-clases,
+body .contenedor-clases .clase-personalizada .texto-clases,
+body .contenedor-clases .clase-profesor .texto-clases,
+body .contenedor-clases .clase-stretching .texto-clases,
+body .contenedor-clases .clase-yoga .texto-clases {
+  font-size: 0.8rem;
+  text-align: justify;
+  padding: 1rem;
+}
+
+body .contenedor-clases .clase-halterofilia .img-clases,
+body .contenedor-clases .clase-musculacion .img-clases,
+body .contenedor-clases .clase-personalizada .img-clases,
+body .contenedor-clases .clase-profesor .img-clases,
+body .contenedor-clases .clase-stretching .img-clases,
+body .contenedor-clases .clase-yoga .img-clases {
+  width: 100%;
+}
+
+body .contenedor-clases .clase-halterofilia {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: clase-halterofilia;
+}
+
+body .contenedor-clases .clase-musculacion {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: clase-musculacion;
+}
+
+body .contenedor-clases .clase-personalizada {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: clase-personalizada;
+}
+
+body .contenedor-clases .clase-profesor {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: clase-profesor;
+}
+
+body .contenedor-clases .clase-stretching {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: clase-stretching;
+}
+
+body .contenedor-clases .clase-yoga {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: clase-yoga;
+}
+
+body .contenedor-rehabilitacion {
+  width: 99%;
+  max-width: 3000px;
+  margin: 5px auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: "header" "rehabilitacion" "footer";
+}
+
+body .contenedor-rehabilitacion .rehabilitacion {
+  background: #3a3a3a;
+  padding: 15px;
+  color: #ffffff;
+  min-height: 3.12rem;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: rehabilitacion;
+}
+
+body .contenedor-rehabilitacion .rehabilitacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .contenedor-rehabilitacion .rehabilitacion .texto-rehabilitacion {
+  font-size: 0.8rem;
+  text-align: justify;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+body .contenedor-rehabilitacion .rehabilitacion .texto-rehabilitacion h6 {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+body .contenedor-rehabilitacion .rehabilitacion .img-rehabilitacion,
+body .contenedor-rehabilitacion .rehabilitacion .img-rehabilitacion2 {
+  width: 25%;
+}
+
+body .contenedor-contacto {
+  width: 99%;
+  max-width: 3000px;
+  margin: 5px auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas: "header" "formulario" "footer";
+}
+
+body .contenedor-contacto > div,
+body .contenedor-contacto .contacto,
+body .contenedor-contacto .formulario {
+  background: #3a3a3a;
+  padding: 15px;
+  color: #ffffff;
+  min-height: 3.12rem;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: formulario;
+}
+
+body .contenedor-contacto .contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .contenedor-contacto .contacto iframe {
+  width: 48%;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+body .contenedor-contacto .contacto .formulario {
+  width: 48%;
+  font-size: 1rem;
+  padding: 15px;
+  border: #000000 solid 1px;
+  margin: 1rem 0 1rem 0;
+}
+
+body .contenedor-contacto .contacto .formulario:hover {
+  border: #ffffff solid 1px;
+}
+
+body .contenedor-contacto .contacto .formulario .bloque-formulario {
+  width: 100%;
+  margin: 3px;
+}
+
+body .contenedor-contacto .contacto .formulario .bloque-formulario:hover {
+  color: #ffffff;
+}
+
+body .contenedor-contacto .contacto .formulario .bloque-formulario .formulario-control {
+  display: block;
+  height: 30px;
+  font-size: 10px;
+  width: 100%;
+  padding: 5px 5px;
+  background-color: #dedede;
+  border: 1px solid #000000;
+}
+
+body .contenedor-contacto .contacto .formulario .bloque-formulario .formulario-control2 {
+  display: block;
+  font-size: 10px;
+  width: 100%;
+  padding: 5px 5px;
+  background-color: #dedede;
+  border: 1px solid #000000;
+  margin-bottom: 2rem;
+  resize: none;
+}
+
+body .contenedor-contacto .contacto .formulario .botonera {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .contenedor-contacto .contacto .formulario .botonera .boton,
+body .contenedor-contacto .contacto .formulario .botonera .boton1 {
+  background-color: #dedede;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 1px solid #000000;
+  padding: 5px;
+  font-family: "Trebuchet MS", #ffffff;
+}
+
+@media screen and (max-width: 800px) {
+  body .contenedor {
+        grid-template-areas: "header header" "main main" "nosotros nosotros" "instalaciones instalaciones" "clases clases" "rehabilitacion rehabilitacion" "footer footer";
+  }
+  body .contenedor h3 {
+    display: inline-block;
+    font-size: 1rem;
+  }
+  body footer {
+    padding: 1rem;
+  }
+  body footer .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  body footer .footer-container .listas-footer {
+    font-size: 10px;
+  }
+  body footer .footer-container .listas-footer li {
+    display: inline-block;
+    text-align: center;
+    font-family: "Trebuchet MS", #ffffff;
+  }
+  body footer .footer-container .listas-footer li a {
+    padding: 1px;
+    font-size: 0.8rem;
+  }
+  body .contenedor-nosotros {
+        grid-template-areas: "header header" "profe1 profe1" "profe2 profe2" "profe3 profe3" "profe4 profe4" "footer footer";
+  }
+  body .contenedor-nosotros h5 {
+    font-size: 1rem;
+  }
+  body .contenedor-nosotros .texto-profe {
+    font-size: 0.7rem;
+    text-align: justify;
+  }
+  body .contenedor-instalaciones .instalaciones .texto-instalaciones {
+    margin-bottom: 0rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  body .contenedor-instalaciones .instalaciones .img-instalaciones {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .contenedor-instalaciones .instalaciones .img-instalaciones .img-inst-ind {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body .contenedor-clases {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "header header" "main main" "clase-halterofilia clase-halterofilia" "clase-musculacion clase-musculacion" "clase-personalizada clase-personalizada" "clase-profesor clase-profesor" "clase-stretching clase-stretching" "clase-yoga clase-yoga" "footer footer";
+  }
+  body .contenedor-clases h4 {
+    font-size: 1rem;
+  }
+  body .contenedor-clases .texto-clases {
+    font-size: 0.7rem;
+  }
+  body .contenedor-rehabilitacion .rehabilitacion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  body .contenedor-rehabilitacion .rehabilitacion .texto-rehabilitacion {
+    padding: 0.5rem;
+    margin-bottom: 0rem;
+  }
+  body .contenedor-rehabilitacion .rehabilitacion .img-rehabilitacion {
+    width: 100%;
+  }
+  body .contenedor-rehabilitacion .rehabilitacion .img-rehabilitacion2 {
+    display: none;
+  }
+  body .contenedor-contacto .contacto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body .contenedor-contacto .contacto iframe {
+    width: 100%;
+  }
+  body .contenedor-contacto .contacto .formulario {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+  body .contenedor-contacto .contacto .formulario .formulario-control,
+  body .contenedor-contacto .contacto .formulario .formulario-control2 {
+    font-size: 8px;
+  }
+  body .contenedor-contacto .contacto .formulario .boton,
+  body .contenedor-contacto .contacto .formulario .boton1 {
+    font-size: 0.7rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
