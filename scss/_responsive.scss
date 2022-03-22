@@ -1,0 +1,212 @@
+@import "variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  @media screen and (max-width: 800px) {
+    .contenedor {
+      h3 {
+        display: inline-block;
+        font-size: 1rem;
+      }
+    }
+    footer {
+      .footer-container {
+        font-size: 0.5rem;
+        h4 {
+          font-size: 0.6rem;
+        }
+        .logo-footer {
+          width: 90px;
+        }
+      }
+    }
+    .contenedor-nosotros {
+      .profe1,
+      .profe2,
+      .profe3,
+      .profe4 {
+        flex-direction: column;
+        h5 {
+          font-size: $fs-1;
+        }
+        .texto-profe {
+          font-size: $fs-12;
+        }
+        .img-nosotros {
+          width: $w-img;
+        }
+      }
+    }
+    .contenedor-instalaciones {
+      .instalaciones {
+        .texto-instalaciones {
+          margin-bottom: 0rem;
+          padding-right: 1.5rem;
+          padding-left: 1.5rem;
+        }
+        .img-instalaciones {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          .img-inst-ind {
+            width: $w-img50;
+            margin: 0.2rem auto;
+          }
+        }
+      }
+    }
+    .contenedor-clases {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "header header" "main main" "clase-halterofilia clase-musculacion" "clase-personalizada clase-profesor" "clase-stretching clase-yoga" "footer footer";
+    }
+    .contenedor-rehabilitacion {
+      .rehabilitacion {
+        display: flex;
+        flex-direction: column-reverse;
+        .texto-rehabilitacion {
+          padding: 0.5rem;
+          margin-bottom: 0rem;
+        }
+        .img-rehabilitacion {
+          width: 100%;
+        }
+        .img-rehabilitacion2 {
+          display: none;
+        }
+      }
+    }
+    .contenedor-contacto {
+      .contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        iframe {
+          width: $w-img;
+        }
+        .formulario {
+          width: $w-img;
+          font-size: $fs-12;
+          .formulario-control,
+          .formulario-control2 {
+            font-size: 8px;
+          }
+          .boton,
+          .boton1 {
+            font-size: $fs-12;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .contenedor {
+      grid-template-areas: "header header" "main main" "nosotros nosotros" "instalaciones instalaciones" "clases clases" "rehabilitacion rehabilitacion" "footer footer";
+      h3 {
+        display: inline-block;
+        font-size: 1rem;
+      }
+    }
+    footer {
+      padding: 1rem;
+      .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: $fs-08;
+        text-align: center;
+        .listas-footer {
+          font-size: 10px;
+          li {
+            display: inline-block;
+            text-align: center;
+            font-family: $tx;
+            a {
+              padding: 1px;
+              font-size: $fs-08;
+            }
+          }
+        }
+      }
+    }
+    .contenedor-nosotros {
+      grid-template-areas: "header header" "profe1 profe1" "profe2 profe2" "profe3 profe3" "profe4 profe4" "footer footer";
+      h5 {
+        font-size: 1rem;
+      }
+      .texto-profe {
+        font-size: $fs-12;
+        text-align: justify;
+      }
+    }
+    .contenedor-instalaciones {
+      .instalaciones {
+        .texto-instalaciones {
+          margin-bottom: 0rem;
+          padding-right: 1.5rem;
+          padding-left: 1.5rem;
+        }
+        .img-instalaciones {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .img-inst-ind {
+            width: 90%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    .contenedor-clases {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "header header" "main main" "clase-halterofilia clase-halterofilia" "clase-musculacion clase-musculacion" "clase-personalizada clase-personalizada" "clase-profesor clase-profesor" "clase-stretching clase-stretching" "clase-yoga clase-yoga" "footer footer";
+      h4 {
+        font-size: 1rem;
+      }
+      .texto-clases {
+        font-size: $fs-12;
+      }
+    }
+    .contenedor-rehabilitacion {
+      .rehabilitacion {
+        display: flex;
+        flex-direction: column-reverse;
+        .texto-rehabilitacion {
+          padding: 0.5rem;
+          margin-bottom: 0rem;
+        }
+        .img-rehabilitacion {
+          width: 100%;
+        }
+        .img-rehabilitacion2 {
+          display: none;
+        }
+      }
+    }
+    .contenedor-contacto {
+      .contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        iframe {
+          width: $w-img;
+        }
+        .formulario {
+          width: $w-img;
+          font-size: $fs-12;
+          .formulario-control,
+          .formulario-control2 {
+            font-size: 8px;
+          }
+          .boton,
+          .boton1 {
+            font-size: $fs-12;
+          }
+        }
+      }
+    }
+  }
+}

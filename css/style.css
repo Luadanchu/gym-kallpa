@@ -629,6 +629,120 @@ body .contenedor-contacto .contacto .formulario .botonera .boton1 {
 }
 
 @media screen and (max-width: 800px) {
+  body .contenedor h3 {
+    display: inline-block;
+    font-size: 1rem;
+  }
+  body footer .footer-container {
+    font-size: 0.5rem;
+  }
+  body footer .footer-container h4 {
+    font-size: 0.6rem;
+  }
+  body footer .footer-container .logo-footer {
+    width: 90px;
+  }
+  body .contenedor-nosotros .profe1,
+  body .contenedor-nosotros .profe2,
+  body .contenedor-nosotros .profe3,
+  body .contenedor-nosotros .profe4 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .contenedor-nosotros .profe1 h5,
+  body .contenedor-nosotros .profe2 h5,
+  body .contenedor-nosotros .profe3 h5,
+  body .contenedor-nosotros .profe4 h5 {
+    font-size: 1rem;
+  }
+  body .contenedor-nosotros .profe1 .texto-profe,
+  body .contenedor-nosotros .profe2 .texto-profe,
+  body .contenedor-nosotros .profe3 .texto-profe,
+  body .contenedor-nosotros .profe4 .texto-profe {
+    font-size: 0.7rem;
+  }
+  body .contenedor-nosotros .profe1 .img-nosotros,
+  body .contenedor-nosotros .profe2 .img-nosotros,
+  body .contenedor-nosotros .profe3 .img-nosotros,
+  body .contenedor-nosotros .profe4 .img-nosotros {
+    width: 100%;
+  }
+  body .contenedor-instalaciones .instalaciones .texto-instalaciones {
+    margin-bottom: 0rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  body .contenedor-instalaciones .instalaciones .img-instalaciones {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .contenedor-instalaciones .instalaciones .img-instalaciones .img-inst-ind {
+    width: 50%;
+    margin: 0.2rem auto;
+  }
+  body .contenedor-clases {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "header header" "main main" "clase-halterofilia clase-musculacion" "clase-personalizada clase-profesor" "clase-stretching clase-yoga" "footer footer";
+  }
+  body .contenedor-rehabilitacion .rehabilitacion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  body .contenedor-rehabilitacion .rehabilitacion .texto-rehabilitacion {
+    padding: 0.5rem;
+    margin-bottom: 0rem;
+  }
+  body .contenedor-rehabilitacion .rehabilitacion .img-rehabilitacion {
+    width: 100%;
+  }
+  body .contenedor-rehabilitacion .rehabilitacion .img-rehabilitacion2 {
+    display: none;
+  }
+  body .contenedor-contacto .contacto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body .contenedor-contacto .contacto iframe {
+    width: 100%;
+  }
+  body .contenedor-contacto .contacto .formulario {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+  body .contenedor-contacto .contacto .formulario .formulario-control,
+  body .contenedor-contacto .contacto .formulario .formulario-control2 {
+    font-size: 8px;
+  }
+  body .contenedor-contacto .contacto .formulario .boton,
+  body .contenedor-contacto .contacto .formulario .boton1 {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
   body .contenedor {
         grid-template-areas: "header header" "main main" "nosotros nosotros" "instalaciones instalaciones" "clases clases" "rehabilitacion rehabilitacion" "footer footer";
   }
