@@ -19,3 +19,34 @@ $fs-13: 0.8rem;
 $fs-1: 1rem;
 $fs-15: 1.5rem;
 $fs-08: 0.8rem;
+$ig: #dd2a7b;
+$fb: #4267b2;
+$twt: #1da1f2;
+$bp-tablet: 800px;
+$bp-mobile: 600px;
+@mixin contenedores {
+  width: $w-cont-page;
+  max-width: $mw-cont-page;
+  margin: $m-cont-page;
+  display: grid;
+  grid-gap: $grid-gap-cont-page;
+}
+@mixin redes($hover) {
+  font-size: 20px;
+  text-align: center;
+  &:hover {
+    color: $hover;
+  }
+}
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+$breakpoints: (
+  tablet: $bp-tablet,
+  mobile: $bp-mobile,
+);
