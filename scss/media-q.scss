@@ -19,7 +19,7 @@
         margin-top: 1.2rem;
       }
       .logo-footer {
-        width: $w-img30;
+        width: 40%;
       }
       .listas-footer {
         font-size: 0.5rem;
@@ -102,10 +102,37 @@
         .formulario-control2 {
           font-size: 8px;
         }
+        .hora {
+          @include flex-row;
+          input {
+            margin-left: 3rem;
+          }
+        }
         .boton,
         .boton1 {
           font-size: $fs-12;
         }
+      }
+    }
+  }
+  .contenedor-404{
+    @include contenedores;
+    overflow: hidden;
+    .error404{
+      .text-404{
+        @include eror404-resp;
+        p{
+          font-size: .9rem;
+        }
+      }
+      .img-404{
+        display: none;
+      }
+      .img-404-2{
+        display: block;
+        width: 100vw;
+        height: 97.9vh;
+        z-index: -100;
       }
     }
   }
@@ -124,7 +151,17 @@
         font-size: 0.6rem;
       }
       .logo-footer {
-        width: 90px;
+        width: 120px;
+      }
+      .listas-footer li{
+        a{
+          .fa-instagram, 
+          .fa-facebook,
+          .fa-twitter,
+          .fa-whatsapp {
+          font-size: 15px;
+        }
+        }
       }
     }
   }
@@ -197,6 +234,12 @@
         .formulario-control,
         .formulario-control2 {
           font-size: 8px;
+        }
+        .hora {
+          @include flex-row;
+          input {
+            margin-left: 5rem;
+          }
         }
         .botonera {
           .boton,

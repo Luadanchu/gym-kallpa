@@ -23,6 +23,9 @@
       src="https://kit.fontawesome.com/54a9dfe718.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" />
     <title>Gym Kallpa-Contactanos</title>
   </head>
@@ -115,16 +118,30 @@
                 placeholder="Nombre completo">
             </div><br>
             <div class="bloque-formulario">
-                <label for="dni">DNI*</label>
-                <input type="dni" name="dni" class="formulario-control" placeholder="DNI" required>
+                <label for="dni">Tel*</label>
+                <input type="number" name="tel" class="formulario-control" placeholder="Celular" required>
             </div><br>
             <div class="bloque-formulario">
-                <label for="email">Email*</label>
-                <input type="email" name="email" placeholder="Email" class="formulario-control" required>
+              <label for="clases" >Clase en la que estás intersado/a</label>
+              <select name="clase" class="formulario-control">
+                  <option  value="opciones" >--Elige una opción--</option>
+                  <option value="halterofilia">Halterofilia</option>
+                  <option value="musculacion">Musculación</option>
+                  <option value="personalizadas">Personalizadas</option>
+                  <option value="profesor">Profesor</option>
+                  <option value="stretching">Stretching</option>
+                  <option value="yoga">Yoga</option>
+              </select>
             </div><br>
+            <div class="bloque-formulario hora">
+              <label for="horario" required>Franja horaria</label>
+              <input type="radio" name="horario" value="mañana">Mañana
+              <input type="radio" name="horario" value="tarde" >Tarde
+              <input type="radio" name="horario" value="Noche">Noche
+          </div><br>
             <div class="bloque-formulario">
                 <label for="comentario">Comentario</label>
-                <textarea name="comentario" id=" cols="30" rows="5" class="formulario-control2" placeholder="Comentario"></textarea>
+                <textarea name="comentario" id=" cols="30" rows="6" class="formulario-control2" placeholder="Comentario"></textarea>
             </div>
             <div class="botonera">
                 <input type="submit" class="boton" value="Enviar">
@@ -157,20 +174,28 @@
           <h4>Seguinos en nuestras redes</h4>
           <ul class="listas-footer">
             <li>
-              <a href="#" target="_BLANCK"
+              <a href="https://www.whatsapp.com/" target="_BLANCK"
+                ><i i class="fab fa-whatsapp"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_BLANCK"
                 ><i class="fab fa-instagram"></i
               ></a>
             </li>
             <li>
-              <a href="#" target="_BLANCK"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.facebook.com/" target="_BLANCK"><i class="fab fa-facebook"></i></a>
             </li>
             <li>
-              <a href="#" target="_BLANCK"
+              <a href="https://www.twitter.com/" target="_BLANCK"
                 ><i i class="fab fa-twitter"></i
               ></a>
             </li>
           </ul>
         </div>
+      </div>
+      <div class="barra-footer">
+        &copy; 2022 - Adanchú Lucila
       </div>
     </footer>
     </div>
