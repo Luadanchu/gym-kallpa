@@ -393,6 +393,15 @@ body {
         color: #ffffff;
         font-size: 0.8rem;
         text-decoration: none; }
+      body .contenedor-404 .error404 .text-404 .boton-404 {
+        background: #000000;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        border-radius: 5%;
+        padding: 5px; }
+        body .contenedor-404 .error404 .text-404 .boton-404:hover {
+          background: #dedede;
+          color: #000000; }
     body .contenedor-404 .error404 .img-404 {
       width: 100vw;
       height: 97.9vh;
