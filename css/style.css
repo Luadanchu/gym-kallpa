@@ -65,7 +65,8 @@ body {
   body .contenedor .instalaciones {
     grid-area: instalaciones; }
   body .contenedor .clases {
-    grid-area: clases; }
+    grid-area: clases;
+    width: 100%; }
   body .contenedor .rehabilitacion {
     grid-area: rehabilitacion; }
   body footer {
