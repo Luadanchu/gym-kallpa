@@ -59,6 +59,7 @@ body {
     }
     .img-inicio {
       width: $w-img;
+
       &:hover {
         filter: brightness(1.5);
       }
