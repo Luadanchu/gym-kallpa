@@ -55,15 +55,12 @@
 
   .contenedor-nosotros {
     grid-template-areas: "header header" "profe1 profe1" "profe2 profe2" "profe3 profe3" "profe4 profe4" "footer footer";
-<<<<<<< HEAD
+    @include flex-column;
     .profe1,
     .profe2,
     .profe3,
     .profe4 {
       margin: 0;
-=======
-    overflow: hidden;
->>>>>>> retfinal
     h5 {
       font-size: 1rem;
     }
