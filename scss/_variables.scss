@@ -31,6 +31,7 @@ $bp-mobile: 600px;
   margin: $m-cont-page;
   display: grid;
   grid-gap: $grid-gap-cont-page;
+  overflow: hidden;
 }
 @mixin redes($hover) {
   font-size: 25px;
