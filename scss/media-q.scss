@@ -5,6 +5,13 @@
 @mixin contM($breakpoints, $mobile) {
   .contenedor {
     grid-template-areas: "header header" "main main" "nosotros nosotros" "instalaciones instalaciones" "clases clases" "rehabilitacion rehabilitacion" "footer footer";
+    .nosotros,
+    .instalaciones,
+    .clases,
+    .rehabilitacion {
+      margin: 0;
+      overflow: hidden;
+    }
     h3 {
       display: inline-block;
       font-size: 1rem;
@@ -48,6 +55,7 @@
 
   .contenedor-nosotros {
     grid-template-areas: "header header" "profe1 profe1" "profe2 profe2" "profe3 profe3" "profe4 profe4" "footer footer";
+    overflow: hidden;
     h5 {
       font-size: 1rem;
     }
@@ -86,6 +94,7 @@
   .contenedor-clases {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "header header" "main main" "clase-halterofilia clase-halterofilia" "clase-musculacion clase-musculacion" "clase-personalizada clase-personalizada" "clase-profesor clase-profesor" "clase-stretching clase-stretching" "clase-yoga clase-yoga" "footer footer";
+    overflow: hidden;
     h4 {
       font-size: 1rem;
     }
@@ -99,6 +108,7 @@
   /*-------EMPIEZA ESTILO PÁGINA REHABILITACIÓN PARA MOBILE-------*/
 
   .contenedor-rehabilitacion {
+    overflow: hidden;
     .rehabilitacion {
       display: flex;
       flex-direction: column-reverse;
@@ -120,6 +130,7 @@
   /*-------EMPIEZA ESTILO PÁGINA CONTACTO PARA MOBILE-------*/
 
   .contenedor-contacto {
+    overflow: hidden;
     .contacto {
       @include flex-column;
       justify-content: space-around;
@@ -182,6 +193,7 @@
 
 @mixin contT($breakpoints, $bp-tablet) {
   .contenedor {
+    overflow: hidden;
     h3 {
       display: inline-block;
       font-size: 1rem;
@@ -217,6 +229,7 @@
   /*-------EMPIEZA ESTILO PÁGINA NOSOTROS PARA TABLET-------*/
 
   .contenedor-nosotros {
+    overflow: hidden;
     .profe1,
     .profe2,
     .profe3,
@@ -239,6 +252,7 @@
   /*-------EMPIEZA ESTILO PÁGINA INSTALACIONES PARA TABLET-------*/
 
   .contenedor-instalaciones {
+    overflow: hidden;
     .instalaciones {
       .texto-instalaciones {
         margin-bottom: 0rem;
@@ -265,6 +279,7 @@
   .contenedor-clases {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "header header" "main main" "clase-halterofilia clase-musculacion" "clase-personalizada clase-profesor" "clase-stretching clase-yoga" "footer footer";
+    overflow: hidden;
   }
   
   /*-------TERMINA ESTILO PÁGINA CLASES PARA TABLET-------*/
@@ -272,6 +287,7 @@
   /*-------EMPIEZA ESTILO PÁGINA REHABILITACIÓN PARA TABLET-------*/
 
   .contenedor-rehabilitacion {
+    overflow: hidden;
     .rehabilitacion {
       display: flex;
       flex-direction: column-reverse;
@@ -293,6 +309,7 @@
   /*-------EMPIEZA ESTILO PÁGINA CONTACTO PARA TABLET-------*/
 
   .contenedor-contacto {
+    overflow: hidden;
     .contacto {
       @include flex-column;
       justify-content: space-around;
