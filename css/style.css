@@ -723,7 +723,6 @@ body {
                 font-size: 0.8rem; }
       body .contenedor-nosotros {
         grid-template-areas: "header header" "profe1 profe1" "profe2 profe2" "profe3 profe3" "profe4 profe4" "footer footer";
-        display: flex;
         flex-direction: column; }
         body .contenedor-nosotros .profe1,
         body .contenedor-nosotros .profe2,

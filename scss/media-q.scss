@@ -55,7 +55,7 @@
 
   .contenedor-nosotros {
     grid-template-areas: "header header" "profe1 profe1" "profe2 profe2" "profe3 profe3" "profe4 profe4" "footer footer";
-    @include flex-column;
+    flex-direction: column;
     .profe1,
     .profe2,
     .profe3,
