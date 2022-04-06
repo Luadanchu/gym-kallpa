@@ -74,3 +74,48 @@ $breakpoints: (
   margin-top: 30vh;
   margin-left: 10vw;
 }
+@mixin header-nav-bar{
+  .container{
+    .fa-bars:before {
+      color: $color-w;
+      position: absolute;
+      right: 20px;
+      top: 30px;
+    }
+    .nav-bar{
+      background: $bg-sp;
+      display: block;
+      color: white;
+      cursor: pointer;
+      font-size: 1.2rem;
+      z-index: 0;
+    }
+    .menu {
+      @include flex-column;
+      justify-content: space-around;
+      position: absolute;
+      left: 3px;
+      top: 75px;
+      background: $bg-sp;
+      width: 97.3vw;
+      height: 400px;
+      transition: all 0.5s;
+      transform: translateX(-200%);
+      z-index: 10;
+      .menu__link{
+        display: block;
+        padding: 20px;
+        color: white;
+        font-size: $fs-1;
+        text-align: justify;
+        text-decoration: none;
+        &:hover{
+          background: #878787;
+        }
+      }
+    }
+    .mostrar{
+      transform: translateX(0);
+    }
+  }
+}

@@ -5,9 +5,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/*-------EMPIEZA ESTILO INDEX-------*/
+
 body {
   background-color: $bg-gral;
   font-family: "Roboto", sans-serif;
+  text-shadow: none;
   &::-webkit-scrollbar {
     width: 0.5rem;
     margin: 0;
@@ -28,11 +32,37 @@ body {
     background: $bg-sp;
     padding: 5px;
     grid-area: header;
+    height: 70px;
     .container {
       @include flex-row;
       justify-content: space-between;
       align-items: center;
       padding: 2px;
+      .fa-bars:before {
+        color: $bg-sp;
+      }
+      nav{
+        padding: 5px;
+        @include flex-row;
+        justify-content: end;
+        margin-right: -600px;
+        .menu {
+          list-style-type: none;
+          li {
+            display: inline-block;
+            text-align: center;
+            a {
+              text-decoration: none;
+              display: inline-block;
+              color: $color-w;
+              margin: 0 5px;
+              padding: 3px;
+              font-size: $fs-1;
+              display: block;
+            }
+          }
+        }
+      }
     }
     #logo {
       width: 150px;
@@ -59,7 +89,6 @@ body {
     }
     .img-inicio {
       width: $w-img;
-
       &:hover {
         filter: brightness(1.5);
       }
@@ -79,7 +108,6 @@ body {
     }
     .clases {
       grid-area: clases;
-      width: 100%;
     }
     .rehabilitacion {
       grid-area: rehabilitacion;
@@ -103,6 +131,7 @@ body {
         font-size: $fs-13;
         text-align: center;
         margin-bottom: .7rem;
+        text-shadow: 0;
       }
       .p-footer {
         margin-bottom: 0px;
@@ -131,6 +160,11 @@ body {
       text-align: center
     }
   }
+
+  /*-------TERMINA ESTILO INDEX-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA NOSOTROS-------*/
+
   .contenedor-nosotros {
     @include contenedores;
     grid-template-columns: repeat(2, 1fr);
@@ -185,6 +219,10 @@ body {
       grid-area: profe4;
     }
   }
+  /*-------TERMINA ESTILO PÁGINA NOSOTROS-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA INSTALACIONES-------*/
+
   .contenedor-instalaciones {
     @include contenedores;
     grid-template-columns: repeat(1, 1fr);
@@ -221,6 +259,11 @@ body {
       }
     }
   }
+
+  /*-------TERMINA ESTILO PÁGINA INSTALACIONES-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA CLASES-------*/
+
   .contenedor-clases {
     @include contenedores;
     grid-template-columns: repeat(3, 1fr);
@@ -283,6 +326,11 @@ body {
       grid-area: clase-yoga;
     }
   }
+
+  /*-------TERMINA ESTILO PÁGINA CLASES-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA REHABILITACIÓN-------*/
+
   .contenedor-rehabilitacion {
     @include contenedores;
     grid-template-columns: repeat(1, 1fr);
@@ -313,6 +361,10 @@ body {
       }
     }
   }
+  /*-------TERMINA ESTILO PÁGINA REHABILITACIÓN-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA CONTACTO-------*/
+
   .contenedor-contacto {
     @include contenedores;
     grid-template-columns: repeat(1, 1fr);
@@ -385,7 +437,8 @@ body {
         .botonera {
           @include flex-row;
           justify-content: space-between;
-          .boton {
+          .boton,
+          .boton1 {
             background-color: $bg-form;
             color: $bg-gral;
             font-size: $fs-1;
@@ -394,12 +447,15 @@ body {
             padding: 5px;
             font-family: $tx;
           }
-          .boton1 {
-            @extend .boton;
-          }
         }
       }
-    }}
+    }
+  }
+
+    /*-------TERMINA ESTILO PÁGINA CONTACTO-------*/
+
+    /*-------EMPIEZA ESTILO PÁGINA ERROR 404-------*/
+
     .contenedor-404{
       @include contenedores;
       overflow: hidden;
@@ -443,7 +499,11 @@ body {
         }
       }
     }
-  
+
+    /*-------TERMINA ESTILO PÁGINA ERROR 404-------*/
+
+    /*-------EMPIEZA ESTILO RESPONSIVE-------*/
+
   @media screen and (max-width: $bp-tablet) {
     @include contT($breakpoints, $bp-tablet);
   }

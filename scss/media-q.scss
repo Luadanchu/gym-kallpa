@@ -1,4 +1,7 @@
 @import "variables";
+
+/*-------EMPIEZA ESTILO RESPONSIVE PARA MOBILE-------*/
+
 @mixin contM($breakpoints, $mobile) {
   .contenedor {
     grid-template-areas: "header header" "main main" "nosotros nosotros" "instalaciones instalaciones" "clases clases" "rehabilitacion rehabilitacion" "footer footer";
@@ -6,6 +9,9 @@
       display: inline-block;
       font-size: 1rem;
     }
+  }
+  header{
+    @include header-nav-bar;
   }
   footer {
     padding: 1rem;
@@ -35,6 +41,11 @@
       }
     }
   }
+
+  /*-------TERMINA ESTILO INDEX PARA MOBILE-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA NOSOTROS PARA MOBILE-------*/
+
   .contenedor-nosotros {
     grid-template-areas: "header header" "profe1 profe1" "profe2 profe2" "profe3 profe3" "profe4 profe4" "footer footer";
     h5 {
@@ -45,6 +56,11 @@
       text-align: justify;
     }
   }
+
+  /*-------TERMINA ESTILO PÁGINA NOSOTROS PARA MOBILE-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA INSTALACIONES PARA MOBILE-------*/
+
   .contenedor-instalaciones {
     .instalaciones {
       .texto-instalaciones {
@@ -62,6 +78,11 @@
       }
     }
   }
+
+  /*-------TERMINA ESTILO PÁGINA NOSOTROS PARA MOBILE-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA CLASES PARA MOBILE-------*/
+
   .contenedor-clases {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "header header" "main main" "clase-halterofilia clase-halterofilia" "clase-musculacion clase-musculacion" "clase-personalizada clase-personalizada" "clase-profesor clase-profesor" "clase-stretching clase-stretching" "clase-yoga clase-yoga" "footer footer";
@@ -72,6 +93,11 @@
       font-size: $fs-12;
     }
   }
+  
+  /*-------TERMINA ESTILO PÁGINA CLASES PARA MOBILE-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA REHABILITACIÓN PARA MOBILE-------*/
+
   .contenedor-rehabilitacion {
     .rehabilitacion {
       display: flex;
@@ -88,6 +114,11 @@
       }
     }
   }
+  
+  /*-------TERMINA ESTILO PÁGINA REHABILITACIÓN PARA MOBILE-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA CONTACTO PARA MOBILE-------*/
+
   .contenedor-contacto {
     .contacto {
       @include flex-column;
@@ -115,6 +146,11 @@
       }
     }
   }
+  
+  /*-------TERMINA ESTILO PÁGINA CONTACTO PARA MOBILE-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA 404 PARA MOBILE-------*/
+
   .contenedor-404{
     @include contenedores;
     overflow: hidden;
@@ -136,13 +172,23 @@
       }
     }
   }
+  
+  /*-------TERMINA ESTILO PÁGINA 404 PARA MOBILE-------*/
 }
+
+/*-------TERMINA ESTILO RESPONSIVE PARA MOBILE-------*/
+
+/*-------EMPIEZA ESTILO RESPONSIVE PARA TABLET-------*/
+
 @mixin contT($breakpoints, $bp-tablet) {
   .contenedor {
     h3 {
       display: inline-block;
       font-size: 1rem;
     }
+  }
+  header{
+    @include header-nav-bar;
   }
   footer {
     .footer-container {
@@ -165,6 +211,11 @@
       }
     }
   }
+  
+  /*-------TERMINA ESTILO INDEX PARA TABLET-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA NOSOTROS PARA TABLET-------*/
+
   .contenedor-nosotros {
     .profe1,
     .profe2,
@@ -182,6 +233,11 @@
       }
     }
   }
+  
+  /*-------TERMINA ESTILO PÁGINA NOSOTROS PARA TABLET-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA INSTALACIONES PARA TABLET-------*/
+
   .contenedor-instalaciones {
     .instalaciones {
       .texto-instalaciones {
@@ -201,10 +257,20 @@
       }
     }
   }
+  
+  /*-------TERMINA ESTILO PÁGINA INSTALACIONES PARA TABLET-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA CLASES PARA TABLET-------*/
+
   .contenedor-clases {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "header header" "main main" "clase-halterofilia clase-musculacion" "clase-personalizada clase-profesor" "clase-stretching clase-yoga" "footer footer";
   }
+  
+  /*-------TERMINA ESTILO PÁGINA CLASES PARA TABLET-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA REHABILITACIÓN PARA TABLET-------*/
+
   .contenedor-rehabilitacion {
     .rehabilitacion {
       display: flex;
@@ -221,6 +287,11 @@
       }
     }
   }
+  
+  /*-------TERMINA ESTILO PÁGINA REHABILITACIÓN PARA TABLET-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA CONTACTO PARA TABLET-------*/
+
   .contenedor-contacto {
     .contacto {
       @include flex-column;
@@ -250,4 +321,34 @@
       }
     }
   }
+  
+  /*-------TERMINA ESTILO PÁGINA CONTACTO PARA TABLET-------*/
+
+  /*-------EMPIEZA ESTILO PÁGINA 404 PARA MOBILE-------*/
+
+  .contenedor-404{
+    @include contenedores;
+    overflow: hidden;
+    .error404{
+      .text-404{
+        @include eror404-resp;
+        p{
+          font-size: .9rem;
+        }
+      }
+      .img-404{
+        display: none;
+      }
+      .img-404-2{
+        display: block;
+        width: 100vw;
+        height: 97.9vh;
+        z-index: -100;
+      }
+    }
+  }
+  
+  /*-------TERMINA ESTILO PÁGINA 404 PARA MOBILE-------*/
+  
 }
+/*-------TERMINA ESTILO RESPONSIVE PARA TABLET-------*/
