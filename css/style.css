@@ -48,7 +48,8 @@ body {
     background: #3a3a3a;
     padding: 5px;
     grid-area: header;
-    height: 70px; }
+    height: 70px;
+    background: #2d2d2d; }
     body header .container {
       display: flex;
       flex-direction: row;
@@ -56,13 +57,13 @@ body {
       align-items: center;
       padding: 2px; }
       body header .container .fa-bars:before {
-        color: #3a3a3a; }
+        color: #2d2d2d; }
       body header .container nav {
         padding: 5px;
         display: flex;
         flex-direction: row;
         justify-content: end;
-        margin-right: -500px; }
+        margin-right: -400px; }
         body header .container nav .menu {
           list-style-type: none; }
           body header .container nav .menu li {
@@ -71,11 +72,18 @@ body {
             body header .container nav .menu li a {
               text-decoration: none;
               display: inline-block;
-              color: #ffffff;
+              color: #dedede;
               margin: 0 5px;
               padding: 3px;
               font-size: 1rem;
-              display: block; }
+              display: inline-block;
+              text-transform: uppercase;
+              text-rendering: optimizeLegibility; }
+              body header .container nav .menu li a:hover {
+                color: #202020;
+                background-color: #2d2d2d;
+                letter-spacing: .1em;
+                text-shadow: -1px -1px 1px #000000, 2px 2px 1px #363636; }
     body header #logo {
       width: 150px;
       margin-left: 2rem; }
@@ -117,7 +125,7 @@ body {
     grid-area: rehabilitacion;
     margin-right: 3rem; }
   body footer {
-    background: #3a3a3a;
+    background: #2d2d2d;
     color: #ffffff;
     padding: 0.5rem 2rem;
     grid-area: footer;
@@ -133,8 +141,7 @@ body {
       body footer .footer-container h4 {
         font-size: 0.8rem;
         text-align: center;
-        margin-bottom: .7rem;
-        text-shadow: 0; }
+        margin-bottom: .7rem; }
       body footer .footer-container .p-footer {
         margin-bottom: 0px; }
       body footer .footer-container .listas-footer li {
@@ -345,7 +352,7 @@ body {
       body .contenedor-rehabilitacion .rehabilitacion .texto-rehabilitacion {
         font-size: 0.8rem;
         text-align: justify;
-        padding: 1.5rem;
+        padding: 1rem;
         margin-bottom: 0.5rem; }
         body .contenedor-rehabilitacion .rehabilitacion .texto-rehabilitacion h6 {
           font-size: 1.2rem;
@@ -376,10 +383,12 @@ body {
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      margin: 0 3rem 0 3rem; }
+      margin: 0 3rem 0 3rem;
+      padding: 3rem 2rem 3rem 2rem; }
       body .contenedor-contacto .contacto iframe {
         width: 48%;
-        filter: grayscale(1); }
+        filter: grayscale(1);
+        margin: 1rem 0 1rem 0; }
       body .contenedor-contacto .contacto .formulario {
         width: 48%;
         font-size: 0.8rem;
@@ -432,6 +441,9 @@ body {
             border: 1px solid #000000;
             padding: 5px;
             font-family: "Roboto", sans-serif, #ffffff; }
+            body .contenedor-contacto .contacto .formulario .botonera .boton:hover,
+            body .contenedor-contacto .contacto .formulario .botonera .boton1:hover {
+              background: #ffffff; }
   body .contenedor-404 {
     width: 99%;
     max-width: 3000px;
@@ -457,10 +469,10 @@ body {
         font-size: 0.8rem;
         text-decoration: none; }
       body .contenedor-404 .error404 .text-404 .boton-404 {
-        background: #000000;
+        background: #2d2d2d;
         color: #ffffff;
-        border: 1px solid #ffffff;
-        border-radius: 5%;
+        border: 1px solid #000000;
+        border-radius: 15px;
         padding: 5px; }
         body .contenedor-404 .error404 .text-404 .boton-404:hover {
           background: #dedede;
@@ -523,8 +535,6 @@ body {
           font-size: 1rem;
           text-align: justify;
           text-decoration: none; }
-          body header .container .menu .menu__link:hover {
-            background: #878787; }
       body header .container .mostrar {
         transform: translateX(0); }
       body footer .footer-container {
@@ -695,8 +705,6 @@ body {
           font-size: 1rem;
           text-align: justify;
           text-decoration: none; }
-          body header .container .menu .menu__link:hover {
-            background: #878787; }
       body header .container .mostrar {
         transform: translateX(0); }
       body footer {

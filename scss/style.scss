@@ -32,19 +32,20 @@ body {
     padding: 5px;
     grid-area: header;
     height: 70px;
+    background: $bg-nav;
     .container {
       @include flex-row;
       justify-content: space-between;
       align-items: center;
       padding: 2px;
       .fa-bars:before {
-        color: $bg-sp;
+        color: $bg-nav;
       }
       nav{
         padding: 5px;
         @include flex-row;
         justify-content: end;
-        margin-right: -500px;
+        margin-right: -400px;
         .menu {
           list-style-type: none;
           li {
@@ -53,11 +54,21 @@ body {
             a {
               text-decoration: none;
               display: inline-block;
-              color: $color-w;
+              color: $bg-form;
               margin: 0 5px;
               padding: 3px;
               font-size: $fs-1;
-              display: block;
+              display: inline-block;
+              text-transform: uppercase;
+              text-rendering: optimizeLegibility;
+              &:hover{
+                color: #202020;
+                background-color: #2d2d2d;
+                letter-spacing: .1em;
+                text-shadow: 
+                -1px -1px 1px $bg-gral, 
+                2px 2px 1px #363636;
+              }
             }
           }
         }
@@ -118,7 +129,7 @@ body {
     }
   }
   footer {
-    background: $bg-sp;
+    background: $bg-nav;
     color: $color-w;
     padding: 0.5rem 2rem;
     grid-area: footer;
@@ -135,7 +146,6 @@ body {
         font-size: $fs-13;
         text-align: center;
         margin-bottom: .7rem;
-        text-shadow: 0;
       }
       .p-footer {
         margin-bottom: 0px;
@@ -359,7 +369,7 @@ body {
       .texto-rehabilitacion {
         font-size: 0.8rem;
         text-align: justify;
-        padding: 1.5rem;
+        padding: 1rem;
         margin-bottom: 0.5rem;
         h6 {
           font-size: 1.2rem;
@@ -395,9 +405,11 @@ body {
       justify-content: space-around;
       align-items: center;
       margin: 0 3rem 0 3rem;
+      padding: 3rem 2rem 3rem 2rem;
       iframe {
         width: 48%;
         filter: grayscale(1);
+        margin: 1rem 0 1rem 0;
       }
       .formulario {
         width: 48%;
@@ -458,6 +470,9 @@ body {
             border: 1px solid $bg-gral;
             padding: 5px;
             font-family: $tx;
+          &:hover {
+            background: $color-w;
+          }
           }
         }
       }
@@ -490,10 +505,10 @@ body {
             
           }
           .boton-404{
-            background: $bg-gral;
+            background: $bg-nav;
             color: $color-w;
-            border: 1px solid $color-w;
-            border-radius: 5%;
+            border: 1px solid $bg-gral;
+            border-radius: 15px;
             padding: 5px;
             &:hover{
               background: $bg-form;
