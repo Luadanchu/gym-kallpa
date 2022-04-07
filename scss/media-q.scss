@@ -142,7 +142,7 @@
       @include flex-column;
       justify-content: space-around;
       margin: 0;
-      padding: 0;
+      padding: 0.1rem;
       iframe {
         width: $w-img;
       }
