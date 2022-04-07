@@ -786,7 +786,8 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-          margin: 0; }
+          margin: 0;
+          padding: 0 0.25rem 0 0.25rem; }
           body .contenedor-contacto .contacto iframe {
             width: 100%; }
           body .contenedor-contacto .contacto .formulario {
